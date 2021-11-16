@@ -1,21 +1,48 @@
+:root{
+    --amazon-orange: #cd9042;
+    --dark-nav: #131921;
+
+}
 .header{
     height:60px;
     display:flex;
     position: sticky;
+    align-items: center;
     top:0;
-    background-color:#131921;
+    background-color:var(--dark-nav);
     color:white;
-    
 }
 .header-logo{
     width:100px;
-    object-fit:contain;
+    object-fit: contain;
     margin:15px 20px 0 ;
     
 }
 .header-nav{
     display:flex;
+    justify-content: space-evenly;
 }
-.header-option{
-    display:block;
+.header-options{
+    display: flex;
+    flex-direction:column;
+    margin-left:10px;
+    margin-right: 10px;
+    
+}
+.header-search{
+    display:flex;
+    flex:1;
+    align-items: center;
+    border-radius:24px;
+}
+.search-bar{
+    height:12px;
+    padding: 10px;
+    border:none;
+    width:100%;
+}
+.search-icon{
+    padding:5px;
+    height:22px!important;
+    background-color:var(--amazon-orange);
 }
