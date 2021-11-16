@@ -1,0 +1,21 @@
+.header{
+    height:60px;
+    display:flex;
+    position: sticky;
+    top:0;
+    background-color:#131921;
+    color:white;
+    
+}
+.header-logo{
+    width:100px;
+    object-fit:contain;
+    margin:15px 20px 0 ;
+    
+}
+.header-nav{
+    display:flex;
+}
+.header-option{
+    display:block;
+}
