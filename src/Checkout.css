@@ -1,0 +1,24 @@
+*{
+
+}
+.checkout{
+    display:flex;
+    padding:20px;
+    background-color:rgb(245, 245, 245);
+    height:max-content;
+}
+.shopping-basket{
+    
+}
+.checkout-ad{
+    width:100%;
+    margin:0;
+}
+.basket-title{
+   justify-content: right;
+}
+.basket-title{
+    padding:10px;
+    margin-right:10px;
+    border-bottom: 2px solid lightgray;
+}
