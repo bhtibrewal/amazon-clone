@@ -1,34 +1,39 @@
 import React from 'react'
-import './Basket.css'
+import './BasketItem.css'
+import { useStateValue } from './StateProvider';
 
 //2:48:29
 export default function BasketItem(props) {
-    const removeFromCart=()=>{
-
+    const [state, dispatch]=useStateValue();
+    const removeFromCart = () => {
+        dispatch({
+                type: "REMOVE_FROM_CART",
+                id: props.id
+        })
     };
     return (
         <div className="basket-item">
-             <div className="cartproduct-info">
+            <img className="cartproduct-image" src={props.img} alt="" />
+            <div className="cartproduct-info">
                 <div className="cartproduct-name">
                     <strong>{props.name}</strong>
                 </div>
-                <p>
-                    {props.desc}
-                </p>
+
                 <div className="cartproduct-price">
                     <small>$</small>
                     <strong>{props.price}</strong>
                 </div>
                 <div className="cartproduct-rating">
-                    {Array(props.rating).fill().map((_, i) => (
+                    {Array(props.rating).fill().map(() => (
                         <span>⭐</span>
                     ))}
                 </div>
+                <button className="remove-button" onClick={removeFromCart}>
+                    Remove from cart
+                </button>
             </div>
-            <img className="cartproduct-image" src={props.img} alt=""/>
-            <button className="remove-button" onClick={removeFromCart}>
-                Add to cart
-            </button>
+
+
         </div>
     )
 }

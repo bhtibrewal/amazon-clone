@@ -4,14 +4,14 @@ import { useStateValue } from './StateProvider';
 import './Header.css';
 import ShoppingCartIcon from './img/ShoppingCart';
 
-const amazonLogo = 'http://pngimg.com/uploads/amazon/amazon_PNG11.png';
+const amazonLogoWhite = 'http://pngimg.com/uploads/amazon/amazon_PNG11.png';
 function Header() {
     const [{ basket },] = useStateValue();
     return (
         <div className="header" >
             {/* logo */}
             <Link className="link" to="/">
-                <img className="header-logo" alt="" src={amazonLogo} />
+                <img className="header-logo" alt="" src={amazonLogoWhite} />
             </Link>
 
             {/* search bar */}
@@ -26,9 +26,11 @@ function Header() {
                     <div className="line1">
                         Hello,
                     </div>
+                    <Link className="link" to="/sign-in">
                     <div className="line2">
                         Sign in
                     </div>
+                    </Link>
                 </div>
                 <div className="header-options">
                     <span className="line1">

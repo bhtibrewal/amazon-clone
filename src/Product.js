@@ -33,7 +33,7 @@ function Product(props) {
                     <strong>{props.price}</strong>
                 </div>
                 <div className="product-rating">
-                    {Array(props.rating).fill().map((_, i) => (
+                    {Array(props.rating).fill().map(() => (
                         <span>⭐</span>
                     ))}
                 </div>

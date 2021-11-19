@@ -3,13 +3,26 @@
 }
 .checkout{
     display:flex;
+    flex-direction: row;
+    flex-wrap:wrap-reverse;
+    justify-content: space-around;
     padding:20px;
-    background-color:rgb(245, 245, 245);
-    height:max-content;
+
+    align-items: center;
 }
-.shopping-basket{
+.left-column{
+    max-width:800px;
+    width:-webkit-fill-available;
+   
+}
+.right-column{
+    min-width:100%;
+    min-width:300px;
+}
+.sopping-basket-items{
     
 }
+
 .checkout-ad{
     width:100%;
     margin:0;

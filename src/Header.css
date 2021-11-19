@@ -1,6 +1,7 @@
 :root{
     --amazon-orange: #cd9042;
     --dark-nav: #131921;
+    --search-radius:4px;
 }
 .link{
     color: white;
@@ -64,10 +65,12 @@
     padding: 10px;
     border: none;
     width: 100%;
+    border-radius: var(--search-radius) 0 0 var(--search-radius) ;
 }
 .search-icon{
     padding: 5px;
     height: 28px;
     background-color:var(--amazon-orange);
     margin-right: 10px;
+    border-radius:0 var(--search-radius) var(--search-radius) 0px;
 }

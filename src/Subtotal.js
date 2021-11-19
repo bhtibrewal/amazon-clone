@@ -12,21 +12,21 @@ export default function Subtotal() {
         <div className="subtotal">
            
             <CurrencyFormat renderText={(value) => (
-                <>
-                    <p>Subtotal ({itemNum}items) : <strong>{value}</strong></p>
-                    <small className="gift-section">
+                <div classname="subtotal-section">
+                    <p className="subtotal-line">Subtotal ({itemNum} items) : <strong> {value}</strong></p>
+                    <div className="gift-section">
                         <input className="gift-checkbox" type="checkbox" />
                         <span>This order contains a gift.</span>
-                    </small>
-                </>
+                    </div>
+                </div>
             )}
                 decimalScale={2}
                 value={getBasketTotal(basket)}
                 displayType={"text"}
                 thousandSeparator={true}
-                prefix={'$'}
+                prefix={'$ '}
             />
-            <button className="checkout-button">
+            <button className="button checkout-button" disable={itemNum===0}>
                 Proceed to Checkout
             </button>
         </div>

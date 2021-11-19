@@ -1,0 +1,30 @@
+
+.basket-item{
+    background-color: white;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+
+    max-height: 400px;
+    min-width: 100px;
+    
+   
+    margin:15px;
+    padding:25px;
+    z-index: 1;
+}
+.cartproduct-image{
+    max-height: 200px;
+    max-width:150px;
+    width: 100%;   
+    object-fit:contain;
+    
+}
+.remove-button{
+    background-color: var(--amazon-orange);
+    font-weight: 800;
+    font-size:medium;
+    padding: 0.3rem 0.6rem;
+    margin:1rem;
+    border: 1.5px solid;
+}

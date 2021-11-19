@@ -1,29 +1,37 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from './Header';
 import Home from './Home';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Checkout from './Checkout';
+import SignIn from './SignIn';
 
 function App() {
+  
   return (
     <Router>
       <div className="app">
-        <Header />
+      <Routes>
+          <Route path="/sign-in" element={
+            <>
+              <SignIn />
+            </>
+          } />
+        </Routes>
         <Routes>
           <Route path="/checkout" element={
             <>
-              <Checkout/>
+              <Header />
+              <Checkout />
             </>
-          }>
-          </Route>
+          } />
         </Routes>
         <Routes>
           <Route path="/" element={
             <>
-              <Home/>
+              <Header />
+              <Home />
             </>
-          }>
-          </Route>
+          } />
         </Routes>
       </div>
     </Router>

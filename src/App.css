@@ -2,6 +2,19 @@
   text-align: center;
   
 }
+.button{
+  background-color:var(--amazon-orange);
+  border-radius: 2px;
+  padding:10px 20px;
+  border:1px solid #a35f05;
+  align-self:center; 
+}
+
+.secondary-button{
+  border: 1px solid #a6a6a6;
+  padding: 10px 20px;
+  border-radius: 2px;
+}
 
 .App-logo {
   height: 40vmin;
