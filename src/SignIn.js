@@ -1,27 +1,40 @@
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@firebase/auth';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { auth, createUserWithEmailAndPassword, db } from './firebase';
+import {auth, db} from './firebase';
 import './SignIn.css'
 
 export default function SignIn() {
 
     const amazonLogoBlack = 'http://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.png';
-    document.title = "Amazon Sign In";
+    document.title = "Amazon | Sign In";
+    //store the user email and password
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    
     const navigate = useNavigate();
 
+    // sign in current users 
     const signIn = (e) => {
         e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password)
+            .then((auth) => {
+                
+                alert("Signed in Sucessfully!!");
+                navigate('/')
+            })
+            .catch(error => alert(error.message))
     }
+
+    // create a new user with email and password 
+    // shows a alert on sucess and redirects to the home page
     const register = (e) => {
         e.preventDefault();
-        console.log(email, password);
+        // console.log(email, password);
         createUserWithEmailAndPassword(auth, email, password)
             .then((auth) => {
 
-                console.log(auth);
-                alert("user created");
+                alert("User Created Sucessfully!!");
                 if (auth) {
                     navigate('/')
                 }
@@ -31,7 +44,7 @@ export default function SignIn() {
     return (
         <div className="sign-in-page">
             {/* logo */}
-            <Link className="" to="/">
+            <Link className="logo-black" to="/">
                 <img className="header-logo signin" alt="" src={amazonLogoBlack} />
             </Link>
 

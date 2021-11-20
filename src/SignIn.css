@@ -23,6 +23,12 @@
     width:100%;
     max-width:350px;
 }
+.logo-black{
+    padding-bottom:5px;
+}
+.logo-black:hover{
+    /* border: 1px solid ; */
+}
 .sign-in h1{
     font-family:sans-serif;
     margin-bottom: 10px;

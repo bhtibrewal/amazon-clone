@@ -24,7 +24,8 @@ export default function Subtotal() {
                 value={getBasketTotal(basket)}
                 displayType={"text"}
                 thousandSeparator={true}
-                prefix={'$ '}
+                thousandSpacing= '2s' 
+                prefix={'₹ '}
             />
             <button className="button checkout-button" disable={itemNum===0}>
                 Proceed to Checkout

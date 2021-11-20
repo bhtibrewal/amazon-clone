@@ -7,7 +7,8 @@ import { useStateValue } from './StateProvider';
 
 const adLink="https://m.media-amazon.com/images/G/31/AMS/IN/970X250-_desktop_banner.jpg";
 export default function Checkout() {
-    const [{basket}, dispatch]=useStateValue();
+    document.title="Amazon | Check out";
+    const [{basket, user}, dispatch]=useStateValue();
     return (
         <div className="checkout">
             <div className="left-column">

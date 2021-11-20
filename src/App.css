@@ -9,12 +9,26 @@
   border:1px solid #a35f05;
   align-self:center; 
 }
-
+.button:hover{
+  background-color: #cf8627;
+  cursor:pointer;
+}
 .secondary-button{
   border: 1px solid #a6a6a6;
   padding: 10px 20px;
   border-radius: 2px;
 }
+.link{
+  color: white;
+  text-decoration: none;
+}
+.link:hover{
+  border: 1px solid white;
+}
+
+
+
+
 
 .App-logo {
   height: 40vmin;

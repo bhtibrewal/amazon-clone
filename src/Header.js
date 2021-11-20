@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
 import './Header.css';
 import ShoppingCartIcon from './img/ShoppingCart';
+import { signOut } from '@firebase/auth';
+import { auth } from './firebase';
 
 const amazonLogoWhite = 'http://pngimg.com/uploads/amazon/amazon_PNG11.png';
 function Header() {
-    const [{ basket },] = useStateValue();
+
+    const [{ basket, user },] = useStateValue();
     return (
         <div className="header" >
             {/* logo */}
@@ -22,16 +25,28 @@ function Header() {
 
             {/* nav options */}
             <div className="header-nav">
-                <div className="header-options">
-                    <div className="line1">
-                        Hello,
+
+                {/* if user is signed in onClick will be executed and the the user will be sign out
+                    
+                *   if the user is null(i.e., not signed in) we will be redirected to the login page
+                */}
+                <Link className="link" to={!user && "/sign-in"}>
+                    <div className="header-options">
+                        <div className="line1">
+                            Hello,
+                        </div>
+                        <div
+                            onClick={() => {
+                                if (user)
+                                    signOut(auth);
+                            }}
+                            className="line2">
+                            {user ? 'Sign out' : 'Sign in'}
+                        </div>
+
                     </div>
-                    <Link className="link" to="/sign-in">
-                    <div className="line2">
-                        Sign in
-                    </div>
-                    </Link>
-                </div>
+                </Link>
+                <Link className="link" to="">
                 <div className="header-options">
                     <span className="line1">
                         Returns
@@ -40,6 +55,8 @@ function Header() {
                         & Orders
                     </span>
                 </div>
+                </Link>
+                <Link className="link" to="">
                 <div className="header-options">
                     <span className="line1">
                         Your
@@ -48,6 +65,7 @@ function Header() {
                         Prime
                     </span>
                 </div>
+                </Link>
                 <Link className="link" to="/checkout">
                     <div className=" header-cart">
                         <ShoppingCartIcon className="cart-icon" />
@@ -56,7 +74,7 @@ function Header() {
                 </Link>
             </div>
 
-        </div>
+        </div >
     )
 }
 function SearchLogo() {

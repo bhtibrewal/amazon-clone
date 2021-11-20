@@ -16,19 +16,19 @@ export default function BasketItem(props) {
             <img className="cartproduct-image" src={props.img} alt="" />
             <div className="cartproduct-info">
                 <div className="cartproduct-name">
-                    <strong>{props.name}</strong>
+                    {props.name}
                 </div>
 
-                <div className="cartproduct-price">
-                    <small>$</small>
-                    <strong>{props.price}</strong>
+                <div className="price cartproduct-price">
+                    <small>₹</small>
+                    {props.price}
                 </div>
                 <div className="cartproduct-rating">
                     {Array(props.rating).fill().map(() => (
                         <span>⭐</span>
                     ))}
                 </div>
-                <button className="remove-button" onClick={removeFromCart}>
+                <button className="button remove-button" onClick={removeFromCart}>
                     Remove from cart
                 </button>
             </div>

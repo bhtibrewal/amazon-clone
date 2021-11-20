@@ -23,14 +23,12 @@ function Product(props) {
         <div className="product">
             <div className="product-info">
                 <div className="product-name">
-                    <strong>{props.name}</strong>
+                   {props.name}
                 </div>
-                <p>
-                    {props.desc}
-                </p>
-                <div className="product-price">
-                    <small>$</small>
-                    <strong>{props.price}</strong>
+                
+                <div className="price product-price">
+                    <small>₹</small>
+                    <span>{props.price}</span>
                 </div>
                 <div className="product-rating">
                     {Array(props.rating).fill().map(() => (
@@ -39,7 +37,7 @@ function Product(props) {
                 </div>
             </div>
             <img className="product-image" src={props.img} alt=""/>
-            <button className="button-primary" onClick={addToCart}>
+            <button className="button add-button" onClick={addToCart}>
                 Add to cart
             </button>
 
