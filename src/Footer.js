@@ -16,10 +16,10 @@ export const Footer = () => {
                     <a href="https://github.com/bhtibrewal">
                         <img class="footer-icons" src={github} />
                     </a>
-                    <a href="//">
+                    <a href="https://twitter.com/bhtibrewal">
                         <img class="footer-icons" src={twitter} />
                     </a>
-                    <a href="//">
+                    <a href="https://www.linkedin.com/in/bhavika-tibrewal/">
                         <img class="footer-icons" src={linkedin} />
                     </a>
                 </div>
