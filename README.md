@@ -1,13 +1,14 @@
 # Amazon-clone
 
-Visit the Live Project ![here](clone-dcda9.web.app/)
+Visit the Live Project [here](clone-dcda9.web.app/)
 
 ### Tech Stack used: 
 - ReactJs
 - React-router-dom
 - Firebase authentication and Deploy
 
-![image](https://user-images.githubusercontent.com/42600164/144225023-8a54c470-c608-4d52-8f23-9490e1e4786f.png?width=20px)
+![image](https://user-images.githubusercontent.com/42600164/144225023-8a54c470-c608-4d52-8f23-9490e1e4786f.png)
+
 ![image](https://user-images.githubusercontent.com/42600164/144225195-0d85a100-d76e-44c3-905a-62d9daae6d05.png)
 
 
@@ -23,4 +24,4 @@ Visit the Live Project ![here](clone-dcda9.web.app/)
 
 
 ### Feedback 
-To share your feedback or any other query reach out to me at ![linkedin](https://www.linkedin.com/in/bhavika-tibrewal/)
+To share your feedback or any other query reach out to me at [linkedin](https://www.linkedin.com/in/bhavika-tibrewal/)
